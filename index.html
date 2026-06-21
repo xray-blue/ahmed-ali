@@ -24,6 +24,58 @@
         .full { grid-column: span 2; }
         .fb { background: #1877F2; } .wa { background: #25D366; } .tg { background: #0088cc; } .ig { background: #E1306C; } .link { background: #333; }
         .hidden { display: none !important; }
+		
+		/* البطاقة الدعائية */
+.ad-box{
+margin:15px;
+padding:20px;
+border-radius:22px;
+color:white;
+text-align:center;
+line-height:2;
+background: linear-gradient(-45deg,
+#ff4d6d,
+#ff85a1,
+#c77dff,
+#7b2cbf);
+background-size: 400% 400%;
+animation: gradientMove 12s ease infinite;
+box-shadow: 0 10px 30px rgba(255, 77, 109, .35);
+position: relative;
+overflow: hidden;
+}
+
+/* لمعان متحرك */
+.ad-box::before{
+content:'';
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,.15),
+transparent
+);
+transform:rotate(25deg);
+animation: shine 6s linear infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+@keyframes shine{
+0%{transform:translateX(-100%) rotate(25deg);}
+100%{transform:translateX(100%) rotate(25deg);}
+}
+
+
+
     </style>
 </head>
 <body>
@@ -34,11 +86,25 @@
         </div>
         <div class="info">
             <h1>✨VENUS STORE🪐</h1>
-<p>👕🎨 حوّل فكرتك إلى تصميم مميز!<br>
-🔴 طباعة على الملابس<br>
-🔵 طباعة على الأكواب<br>
-🟢 طباعة على الإكسسوارات<br>
-🟣 طباعة الصور والهدايا</p>         
+<div class="ad-box">
+    <h2>🎨✨ حوّل فكرتك إلى تصميم مميز!</h2>
+
+👕 طباعة على الملابس<br>
+☕ طباعة على الأكواب<br>
+🎁 طباعة على الإكسسوارات والهدايا<br>
+🖼️ طباعة الصور واللوحات<br>
+💡 تصاميم حسب الطلب<br><br>
+
+⭐ جودة عالية<br>
+🚀 سرعة في الإنجاز<br>
+🎨 ألوان زاهية وثابتة<br>
+🎁 هدايا مميزة لجميع المناسبات<br><br>
+
+<strong>📩 اطلب الآن واجعل فكرتك حقيقة!</strong>
+
+
+</div>
+       
             <div class="phones">
                 <a href="tel:07809670645" class="phone-btn"><i class="fa-solid fa-phone"></i> 07809670645</a>
                 
